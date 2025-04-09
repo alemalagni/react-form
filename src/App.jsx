@@ -1,6 +1,11 @@
 import { useState } from "react";
-import Articoli from "./Articoli"
-import Article from "./components/Article"
+import Article from "./components/Article";
+
+const Articoli = [
+  "Articolo 1",
+  "Articolo 2",
+  "Articolo 3"
+]
 
 function App() {
 
