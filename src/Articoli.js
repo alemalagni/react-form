@@ -3,3 +3,5 @@ const Articoli = [
     "Articolo 2",
     "Articolo 3"
 ]
+
+export default Articoli;
