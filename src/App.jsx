@@ -33,6 +33,7 @@ function App() {
 function nuovoArticolo(newArticle) {
   console.log(newArticle);
   Articoli.push(newArticle);
+  App
 }
 
 export default App;
