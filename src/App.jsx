@@ -1,19 +1,20 @@
 import { useState } from "react";
 import Article from "./components/Article";
 
-const Articoli = [
-  "Articolo 1",
-  "Articolo 2",
-  "Articolo 3"
-]
-
 function App() {
+
+  const [articoli, setArticoli] = useState([
+    "Articolo 1",
+    "Articolo 2",
+    "Articolo 3"
+  ]);
 
   const [newArticle, setNewArticle] = useState('');
 
   const handleSubmit = event => {
     event.preventDefault();
-    nuovoArticolo(newArticle)
+    setArticoli([...articoli, newArticle]);
+    setNewArticle('');
   }
 
   return (
@@ -25,7 +26,7 @@ function App() {
         />
 
       </form>
-      {Articoli.map((item) => (
+      {articoli.map((item) => (
         <Article
           key={item}
           text={item}
@@ -33,12 +34,6 @@ function App() {
       ))}
     </>
   );
-}
-
-function nuovoArticolo(newArticle) {
-  console.log(newArticle);
-  Articoli.push(newArticle);
-  App
 }
 
 export default App;
